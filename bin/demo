@@ -1,0 +1,13 @@
+#!/usr/bin/node
+
+'use strict';
+
+var path = require('path');
+var ARGV = require('minimist')(process.argv.slice(2));
+var preproc_argv = require(path.join(__dirname, '..', 'preprocess_argv.js'));
+
+var targets = ARGV._;
+delete ARGV._;
+preproc_argv.debug = true;
+
+console.log(preproc_argv(targets, ARGV));

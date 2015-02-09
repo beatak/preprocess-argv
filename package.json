@@ -1,0 +1,23 @@
+{
+    "name": "preprocess-argv",
+    "version": "0.0.1",
+    "description": "A utility for Command Line applications that processes command line arguments as path.",
+    "dependencies": {
+        "shelljs": "^0.3.0"
+    },
+    "devDependencies": {
+        "mocha": "^2.0.1",
+        "minimist": "^1.1.0"
+    },
+    "main": "preprocess_argv.js",
+    "scripts": {
+        "test": "mocha test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:beatak/preprocess-argv.git"
+    },
+    "author": "Takashi Mizohata <beatak@gmail.com>",
+    "license": "MIT",
+    "keywords": ["commandline", "cui", "path", "expand", "tilda", "normalize"]
+}
