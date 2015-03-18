@@ -32,7 +32,7 @@ var preprocess_argv = function (inputs, opt) {
     }
 
     if ('string' === typeof inputs) {
-        result = process_path(inputs, opt)[0];
+        result = process_path(inputs, opt);
     }
     else if (Array.isArray(inputs)) {
         inputs.forEach(function (mypath) {
