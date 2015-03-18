@@ -19,7 +19,7 @@ var preprocess_argv = function (inputs, opt) {
         er.name = 'ArgumentError';
         throw er;
     }
-    if ('object' !== typeof opt || null === opt) {
+    if (opt !== undefined && ('object' !== typeof opt || null === opt)) {
         er = new Error('`opt` is optional, but if you pass it, it needs to be an object (not null, nor array)');
         er.name = 'ArgumentError';
         throw er;
@@ -32,7 +32,7 @@ var preprocess_argv = function (inputs, opt) {
     }
 
     if ('string' === typeof inputs) {
-        result = process_path(inputs, opt);
+        result = process_path(inputs, opt)[0];
     }
     else if (Array.isArray(inputs)) {
         inputs.forEach(function (mypath) {
